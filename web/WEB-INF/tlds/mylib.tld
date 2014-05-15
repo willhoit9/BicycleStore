@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.1" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
+  <tlib-version>1.0</tlib-version>
+  <short-name>mylib</short-name>
+  <uri>/WEB-INF/tlds/mylib</uri>
+  
+   <function>
+      <!-- for description only - must be at top-->
+      <description>Returns a List of Products from products.txt file</description>
+      <!--name used when used by JSP, doesn't have to be same as method name-->
+      <name>getAllProducts</name>      
+      <function-class>com.util.MyFunctions</function-class>
+      <!--must be fully qualified (java.lang.etc....)-->
+      <function-signature>java.util.ArrayList getAllProducts (java.lang.String)</function-signature>
+      
+  </function>
+  
+  <function>
+      <!-- for description only - must be at top-->
+      <description>Returns a single product from products.txt file</description>
+      <!--name used when used by JSP, doesn't have to be same as method name-->
+      <name>getProduct</name>      
+      <function-class>com.util.MyFunctions</function-class>
+      <!--must be fully qualified (java.lang.etc....)-->
+      <function-signature>java.lang.Object getProduct (int, java.lang.String)</function-signature>
+      
+  </function>
+  
+  <!-- A validator verifies that the tags are used correctly at JSP
+          translation time. Validator entries look like this: 
+       <validator>
+           <validator-class>com.mycompany.TagLibValidator</validator-class>
+           <init-param>
+              <param-name>parameter</param-name>
+              <param-value>value</param-value>
+           </init-param>
+       </validator>
+    -->
+  <!-- A tag library can register Servlet Context event listeners in
+         case it needs to react to such events. Listener entries look
+         like this: 
+      <listener>
+          <listener-class>com.mycompany.TagLibListener</listener-class> 
+      </listener>
+    -->
+</taglib>
