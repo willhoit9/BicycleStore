@@ -1,0 +1,64 @@
+Assignment 2
+Shopping Cart
+Due: 03/27/2014
+100 Points
+Shopping Cart
+
+This assignment will focus on using the session scope, and Expression Language (EL) and the
+Java Standard Tag Libraries (JSTL).
+No Scriptlet may be used in any JSP.
+
+The cart application in chapter 8 may be a good place to start.  The code for the book's cart
+application has been uploaded to Angel in the assigment 2 folder.  Their example uses the
+ProductIO class to read from a text file, this is not a requirement.  No file IO or Database access
+is needed, but is an option.
+
+This shopping cart application will consist of two pages, a browse page showing all of the
+available items to add to a cart, and a cart page summarizing the items that have been selected.
+Many popular sites such as Amazon or Best Buy use shopping carts to allow users to select
+items to purchase.  For this application you may choose any category of items to show, such as
+Books, Movies, Clothing, Music, etc.
+
+The browse page must show at least 5 unique items.  Each item must show the following (in any
+order):
+● Item Name
+● Unit Price
+● Short Description
+● An Image (Any reasonable size)
+
+Each item will also have a quantity textbox defaulting to 1 and an "Add to Cart" button or link.
+When clicked the item will be added to the user's cart using the quantity entered into the
+corresponding textbox.  If the item already exists in the user's cart the current quantity will be
+incremented by the quantity entered, not overwritten.  Additionally validation is added to prevent
+any value less than 1 from being submitted as quantity. This validation may be client side or
+server side.
+
+After the item has been added to the cart, the user is taken to the cart page.  On the cart page all
+of the items the user has added to their cart will be displayed.  For each item display the
+following (in any order):
+● Item Name
+● Unit Price
+● Current Quantity
+● Line Price (unit price * current quantity)
+
+
+
+Each item in the cart also provides the user with a means to alter the quantity, or remove it
+completely.  After the quantity has been altered or the item removed, the cart page is redisplayed
+with the updated values.  Validation exists here as well to prevent any quantity less than 1.
+Unlike the quantity on the browse page, which adds to the existing quantity, the cart page sets
+the quantity (overwriting it) instead of adding to the existing quantity.
+Below the list of items in the cart the item totals are displayed.  First the sub­total, the sum of all
+line prices.  Then the grand total, the sub­total with shipping and tax factored in.  Use 7% for the
+tax, and a flat rate of 5.00 for shipping.  Shipping should be added before applying the tax.
+All currency numbers displayed on either the browse or cart pages are formatted as $1,234.56.
+Lastly on the cart page display a hyperlink or button to allow the user to return to the browse
+page to make additional selections.  Remember that if an item already exists in the cart its
+quantity is incremented, not overwritten.
+
+Extra credit (5 Points):
+On the browse screen add search functionality.  This consists of a textbox and search button.
+The text entered into the search box will be used to filter which items the user can see.
+The search will be over both the Item Name and Short Description, the filtering needs to be done
+using contains, meaning the search text "it" will match Item Name or Description "Guitar" (case
+insensitive).
